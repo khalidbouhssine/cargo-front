@@ -1,0 +1,5 @@
+.custom-focus:focus {
+    border-color: #dedede !important; 
+    box-shadow: 0 0 0 0.15rem rgba(230, 230, 230, 0.614); 
+}
+  

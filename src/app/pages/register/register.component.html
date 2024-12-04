@@ -1,0 +1,59 @@
+<app-menunormal></app-menunormal>
+<app-titlenormal [title]="'Create Account'" [customClass]="'mt-5 mb-1'" ></app-titlenormal>
+<form action="" method="post" class="container">
+    <div class="row mt-4 mt-md-2">
+        <div class="col-12 col-md-6">
+            <div class="mb-1">Full Name</div>
+            <app-input 
+                type="text" 
+                id="username" 
+                placeholder="Enter your username" 
+                [required]="true">
+            </app-input>
+        </div>
+        
+        <div class="col-12 col-md-6" style="height: 55px;">
+            <div class="mb-1">Email</div>
+            <app-input 
+                type="text" 
+                id="username"
+                placeholder="Enter your email" 
+                [required]="true">
+            </app-input>
+        </div>
+    </div>
+    <div class="row mt-4 mt-md-2">
+        <div class="col-12 col-md-6">
+            <div class="mb-1">City</div>
+            <app-input 
+                type="text" 
+                id="username" 
+                placeholder="Enter your City" 
+                [required]="true">
+            </app-input>
+        </div>
+        
+        <div class="col-12 col-md-6">
+            <div class="mb-1">Password</div>
+            <app-inputpassword 
+              type="password" 
+              id="password" 
+              placeholder="Enter your password" 
+              [required]="true">
+            </app-inputpassword>
+        </div>
+          
+    </div>
+      
+    <div class="row">
+        <div class="col-12">
+            <app-btnnormal></app-btnnormal>
+        </div>
+    </div>
+    
+    <div class="w-100 d-flex justify-content-center align-items-center" style="height: 55PX;">
+        <a href="/home" style="text-decoration: none;" class="lien">Already have an account?</a>
+    </div>
+    
+         
+</form>
