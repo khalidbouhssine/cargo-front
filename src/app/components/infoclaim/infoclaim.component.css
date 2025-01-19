@@ -1,0 +1,30 @@
+.inforeservation{
+    width: 100%;
+    height: fit-content;
+}
+.placeinfo{
+    flex: 1;
+    height: fit-content;
+    padding-left: 20PX;
+    padding-right: 20PX;
+    margin-top: 40PX;
+}
+.ZoneTitleInfo{
+    flex: 1;
+    height: 50PX;
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17PX;
+    color: rgb(34, 34, 34);
+}
+.Title{
+    font-weight: bold;
+    margin-right: 10PX;
+}
+.ZoneTitleInfoMessage{
+    height: fit-content;
+    display: block;
+}
+.infotext{
+    width: 70%;
+}

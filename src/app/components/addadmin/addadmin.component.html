@@ -1,0 +1,60 @@
+<div class="addcars">
+  <app-menutopdash [title]="'ADD Admin'"></app-menutopdash>
+  <div class="formPlace">
+    <form (ngSubmit)="registerAdminLocal()" #adminForm="ngForm" class="form">
+      <div class="ZoneInp">
+        <div class="titleInp">Full Name</div>
+        <div class="inpDivinp">
+          <input
+            type="text"
+            class="inp"
+            placeholder="Full Name"
+            [(ngModel)]="adming.nomComplet"
+            name="nomComplet"
+            required
+          />
+        </div>
+      </div>
+      <div class="ZoneInp">
+        <div class="titleInp">Email</div>
+        <div class="inpDivinp">
+          <input
+            type="email"
+            class="inp"
+            placeholder="Email"
+            [(ngModel)]="adming.email"
+            name="email"
+            required
+          />
+        </div>
+      </div>
+      <div class="ZoneInp">
+        <div class="titleInp">City</div>
+        <div class="inpDivinp">
+          <select [(ngModel)]="adming.city" name="city" class="inp" required>
+            <option *ngFor="let city of cities" [value]="city.id">
+              {{ city.nameCity }}
+            </option>
+          </select>
+        </div>
+      </div>          
+      <div class="ZoneInp">
+        <div class="titleInp">Password</div>
+        <div class="inpDivinp">
+          <input
+            type="password"
+            class="inp"
+            placeholder="Password"
+            [(ngModel)]="adming.password"
+            name="password"
+            required
+          />
+        </div>
+      </div>
+      <button type="submit" class="btnSave" [disabled]="adminForm.invalid">
+        Save
+      </button>
+    </form>
+    <div class="ImgPlace"></div>
+  </div>
+</div>

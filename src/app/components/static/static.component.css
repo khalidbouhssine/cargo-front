@@ -1,0 +1,22 @@
+.allpage{
+    flex: 1;
+    height: calc(100vh - 130PX);
+    overflow-y: scroll;
+}
+.allpage::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+.container {
+    margin-top: 20px;
+}
+  
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+  

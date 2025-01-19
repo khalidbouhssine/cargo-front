@@ -1,0 +1,48 @@
+.menuTop{
+    flex: 1;
+    height: 70PX;
+    /* background-color: rgb(240, 240, 240); */
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+
+    background: linear-gradient(20deg,#fffce9, #e8f6ff,#fffce9);
+    margin-left: 10PX;
+    margin-right: 10PX;
+    border-radius: 5PX;
+    margin-top: 10PX;
+
+}
+.titlePlace{
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20PX;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 30PX;
+}
+.btnLogout{
+    width: 150PX;
+    height: 40PX;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16PX;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 30PX;
+    border: none;
+    outline: none;
+    padding: 0PX;
+    color: #0FA0CD;
+    background-color: white;
+    border-radius: 5PX;
+    transition: all 0.3s ease-in-out;
+}
+.btnLogout:focus{
+    color: white;
+    background-color: #0FA0CD;
+}
+.btnLogout:hover{
+    color: white;
+    background-color: #0FA0CD;
+}

@@ -1,0 +1,63 @@
+<div class="seereservation">
+  <div class="MenuLeft">
+    <div class="MenuLeftCenter">
+      <div class="title">My Car</div>
+      <div class="ImageCarModify">
+        <img src="assets/imgs/{{ carDetails?.imageName }}" class="imagecarDisp" *ngIf="carDetails?.imageName">
+      </div>
+      <div class="DecriptionModify" *ngIf="carDetails">
+        <div class="ItemListDescriptionTopLeftItemRes">
+          <span class="titleListRes resizeDescriptionModify">Brand :</span>
+          <span class="titleCarListRes resizeDescriptionModify">{{ carDetails.brand }}</span>
+        </div>
+        <div class="ItemListDescriptionTopLeftItemRes">
+          <span class="titleListRes resizeDescriptionModify">Model :</span>
+          <span class="titleCarListRes resizeDescriptionModify">{{ carDetails.model }}</span>
+        </div>
+        <div class="ItemListDescriptionTopLeftItemRes">
+          <span class="titleListRes resizeDescriptionModify">Licence plate :</span>
+          <span class="titleCarListRes resizeDescriptionModify">{{ carDetails.licencePlate }}</span>
+        </div>
+        <div class="ItemListDescriptionTopLeftItemRes">
+          <span class="titleListRes resizeDescriptionModify">Price :</span>
+          <span class="titleCarListRes resizeDescriptionModify">{{ carDetails.pricePerDay }} DH</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="DispRes">
+    <div class="MenuDispRes">
+      <div class="titleMenuDispRes">Modify Reservation</div>
+      <button class="btnMenuDispRes" (click)="deleteReservation()">Cancel</button>
+    </div>
+    <div class="ListOfItem">
+      <div class="ZoneInputModify">
+        <div class="TitleZoneInputModify">Start Date</div>
+        <div class="InputZoneInputModify">
+          <input type="date" class="inp" [(ngModel)]="startDate" (change)="calculateTotalPrice()">
+        </div>
+      </div>
+      <div class="ZoneInputModify">
+        <div class="TitleZoneInputModify">End Date</div>
+        <div class="InputZoneInputModify">
+          <input type="date" class="inp" [(ngModel)]="endDate" (change)="calculateTotalPrice()">
+        </div>
+      </div>
+      <div class="ZoneInputModify">
+        <div class="TitleZoneInputModify">End City</div>
+        <div class="InputZoneInputModify">
+          <select class="inp" [(ngModel)]="selectedCity">
+            <option *ngFor="let city of cities" [value]="city.id">{{ city.nameCity }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="TotalPriceModify">
+        <span class="TotalText">Total :</span>
+        <span class="TotalNumber">{{ totalPrice || '0.00' }} DH</span>
+      </div>
+      <div class="PlaceBtnmodify">
+        <button class="Btnmodify" (click)="updateReservation()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+.dispProfile{
+    flex: 1;
+    height: fit-content;
+    padding-right: 40PX;
+    padding-left: 40PX;
+    padding-top: 40PX;
+}
+.topZone{
+    flex: 1;
+    height: 170PX;
+    background: linear-gradient(20deg,#fffce9, #e8f6ff,#fffce9);
+    border-radius: 4PX;
+    position: relative;
+    box-shadow: 1PX 1PX 20PX rgb(209, 209, 209);
+}
+.placeImg{
+    width: 150PX;
+    height: 150PX;
+    background-color: rgb(224, 224, 224);
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    border: 10PX white solid;
+}
+.topZone .placeImg{
+    bottom: -50PX;
+    left: 30PX;
+}
+.placeNameBtn{
+    flex: 1;
+    height: 60PX;
+    margin-top: 50PX;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.namePlace{
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 30PX;
+    text-transform: capitalize;
+    color: rgb(28, 28, 28);
+}
+.BtnModify{
+    width: 150PX;
+    height: 85%;
+    border: none;
+    outline: none;
+    padding: 0PX;
+    background-color: rgb(242, 242, 242);
+    color: rgb(83, 83, 83);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17PX;
+    text-transform: uppercase;
+}
+.BtnModify:hover{
+    background-color: #0FA0CD;
+    color: rgb(255, 255, 255);
+}
+.PartOfInfo{
+    flex: 1;
+    height: fit-content;
+    margin-top: 30PX;
+    margin-bottom: 100PX;
+    background-color: rgb(250, 250, 250);
+    padding: 30PX;
+    border-radius: 5PX;
+}
+.partItem{
+    width: 50%;
+    height: 50PX;
+    display: flex;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17PX;
+    color: rgb(28, 28, 28);
+}
+.partTitle{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.partDiscrip{
+    margin-left: 10PX;
+}
+.image{
+    width: 100%;
+    height: 100%;
+}

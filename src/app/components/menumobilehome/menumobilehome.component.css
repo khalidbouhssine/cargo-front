@@ -1,0 +1,125 @@
+.menuHome{
+    width: 100%;
+    height: 80PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.menuHomeCenter{
+    flex: 1;
+    height: 60PX;
+    margin-left: 10PX;
+    margin-right: 10PX;
+    border-radius: 4PX;
+    background: linear-gradient(20deg,#fff2b0, #b7e3ff,#fff2b0);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoPlace{
+    width: 170PX;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 100%;
+    height: 90%;
+}
+.BtnMenu{
+    width: 45PX;
+    height: 45PX;
+    border: none;
+    outline: none;
+    padding: 0PX;
+    margin-right: 8PX;
+    background-color: #fff2b000;
+    border-radius: 4PX;
+}
+.BtnMenu:hover{
+    background-color: rgba(128, 128, 128, 0.075);
+}
+.menuImg{
+    width: 25PX;
+    height: 25PX;
+}
+.MenuListDisp{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+}
+.menuHome .MenuListDisp{
+    top: 0PX;
+    left: 0PX;
+}
+.topPart{
+    width: 100%;
+    height: 70PX;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    align-items: center;
+}
+.closeBtn{
+    width: 45PX;
+    height: 45PX;
+    background-color: rgba(228, 228, 228, 0);
+    border: none;
+    outline: none;
+    padding: 0PX;
+    margin-left: 8PX;
+    border-radius: 4PX;
+}
+.closeBtn:focus{
+    background-color: rgb(190, 190, 190);
+}
+.Title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 22PX;
+    margin-left: 8PX;
+    color: #2F2F2F;
+}
+.partList{
+    width: 100%;
+    height: fit-content;
+    margin-top: 40PX;
+}
+.itemList{
+    flex: 1;
+    height: 60PX;
+    display: flex;
+    align-items: center;
+    margin-left: 10PX;
+    margin-right: 10PX;
+    border-bottom: 1PX solid gainsboro;
+    cursor: pointer;
+}
+.itemList:hover{
+    background-color: rgb(247, 247, 247);
+}
+.TextMenu{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 22PX;
+    
+}
+.placeIconMenu{
+    width: 60PX;
+    height: 60PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconImg{
+    width: 30PX;
+    height: 30PX;
+}
+
+@media (min-width: 791px) {
+    .menuHome{
+        display: none;
+    }
+}

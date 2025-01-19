@@ -1,0 +1,28 @@
+<div class="tabCar">
+  <app-menutopdash [title]="'Admin'"></app-menutopdash>
+  <div class="placeTab">
+    <button class="Addcars" routerLink="/dashboardg/addadmin" routerLinkActive="active">Add Admin</button>
+    <div class="TitlesTab">
+      <div class="TitlesTabItem">Full Name</div>
+      <div class="TitlesTabItem">City</div>
+      <div class="TitlesTabItem">Email</div>
+      <div class="TitlesTabItem"></div>
+    </div>
+    <!-- Dynamic Data Rows -->
+    <div *ngFor="let admin of admins" class="dataTab">
+      <div class="TitlesTabItem">{{ admin.nomComplet }}</div>
+      <div class="TitlesTabItem">{{ admin.city }}</div>
+      <div class="TitlesTabItem">{{ admin.email }}</div>
+      <div class="TitlesTabItem">
+        <button class="btn btn-danger" (click)="deleteAdmin(admin.idAdminLocal)">DELETE</button>
+      </div>
+    </div>
+    <div class="Pagination">
+      <div class="PaginationCenter">
+        <button class="Btn" (click)="decrementPage()">-</button>
+        <div class="show">{{ currentPage + 1 }}</div>
+        <button class="Btn" (click)="incrementPage()">+</button>
+      </div>
+    </div>
+  </div>
+</div>

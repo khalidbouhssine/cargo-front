@@ -1,0 +1,34 @@
+<div class="tabCar">
+  <app-menutopdash [title]="'Cars'"></app-menutopdash>
+  <div class="placeTab">
+      <button class="btn btn-primary Addcars" routerLink="/dashboardg/addcar" routerLinkActive="active">Add cars</button>
+      <div class="TitlesTab">
+        <div class="TitlesTabItem">Brand</div>
+        <div class="TitlesTabItem">Model</div>
+        <div class="TitlesTabItem">Licence plate</div>
+        <div class="TitlesTabItem">Status</div>
+        <div class="TitlesTabItem"></div>
+      </div>
+      <!-- Displaying the cars dynamically -->
+      <div *ngFor="let car of cars" class="dataTab">
+        <div class="TitlesTabItem">{{ car.brand }}</div>
+        <div class="TitlesTabItem">{{ car.model }}</div>
+        <div class="TitlesTabItem">{{ car.licenceplate }}</div>
+        <div class="TitlesTabItem">{{ car.status }}</div>
+        <div class="TitlesTabItem">
+          <button 
+            class="btn btn-danger" 
+            (click)="deleteCar(car.idVoiture); $event.stopPropagation();">
+            DELETE
+          </button>
+        </div>
+      </div>
+      <div class="Pagination">
+        <div class="PaginationCenter">
+          <button class="btn btn-secondary Btn" (click)="decrementPage()">-</button>
+          <div class="show">{{ currentPage + 1 }}</div>
+          <button class="btn btn-secondary Btn" (click)="incrementPage()">+</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,51 @@
+<div class="menuHome">
+    <div class="menuHomeCenter">
+      <div class="logoPlace">
+        <img src="assets/logo/logo.png" alt="logo" class="logo">
+      </div>
+      <button class="BtnMenu" (click)="toggleMenu()">
+        <img src="assets/icons/menu.png" alt="menu" class="menuImg">
+      </button>
+      <div class="MenuListDisp" *ngIf="isMenuVisible">
+        <div class="topPart">
+          <button class="closeBtn" (click)="toggleMenu()">
+            <img src="assets/icons/fermer.png" alt="menu" class="iconImg">
+          </button>
+          <div class="Title">Menu</div>
+        </div>
+        <div class="partList">
+          <div class="itemList" (click)="toggleMenu()">
+            <div class="placeIconMenu">
+              <img src="assets/icons/home.png" alt="menu" class="iconImg">
+            </div>
+            <div class="TextMenu">Home</div>
+          </div>
+          <div class="itemList">
+            <div class="placeIconMenu">
+              <img src="assets/icons/utilisateur.png" alt="menu" class="iconImg">
+            </div>
+            <div class="TextMenu">Profile</div>
+          </div>
+          <div class="itemList" [routerLink]="'/seereservation'">
+            <div class="placeIconMenu">
+              <img src="assets/icons/reservation.png" alt="menu" class="iconImg">
+            </div>
+            <div class="TextMenu">Reservation</div>
+          </div>
+          <div class="itemList">
+            <div class="placeIconMenu">
+              <img src="assets/icons/contact.png" alt="menu" class="iconImg">
+            </div>
+            <div class="TextMenu">Contact</div>
+          </div>
+          <div class="itemList" (click)="logout()">
+            <div class="placeIconMenu">
+              <img src="assets/icons/logout.png" alt="menu" class="iconImg">
+            </div>
+            <div class="TextMenu">Log-out</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

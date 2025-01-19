@@ -1,0 +1,29 @@
+<div class="tabCar">
+  <app-menutopdash [title]="'Clients'"></app-menutopdash>
+  <div class="placeTab">
+    <button class="Addcars" routerLink="/dashboardg/addclient" routerLinkActive="active">Add Client</button>
+    <div class="TitlesTab">
+      <div class="TitlesTabItem">Full Name</div>
+      <div class="TitlesTabItem">City</div>
+      <div class="TitlesTabItem">CIN</div>
+      <div class="TitlesTabItem">Email</div>
+    </div>
+
+    <!-- Displaying the clients dynamically -->
+    <div *ngFor="let client of clients" class="dataTab">
+      <div class="TitlesTabItem">{{ client.nomComplet }}</div>
+      <div class="TitlesTabItem">{{ client.city }}</div>
+      <div class="TitlesTabItem">{{ client.cin }}</div>
+      <div class="TitlesTabItem">{{ client.email }}</div>
+    </div>
+
+    <!-- Pagination controls -->
+    <div class="Pagination">
+      <div class="PaginationCenter">
+        <button class="Btn" (click)="decrementPage()">-</button>
+        <div class="show">{{ currentPage + 1 }}</div> <!-- Displaying current page starting from 1 -->
+        <button class="Btn" (click)="incrementPage()">+</button>
+      </div>
+    </div>
+  </div>
+</div>

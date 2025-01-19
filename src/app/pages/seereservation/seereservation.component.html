@@ -1,0 +1,95 @@
+<div class="seereservation">
+  <div class="MenuLeft">
+    <div class="MenuLeftCenter">
+      <div class="title">Filter</div>
+      <div class="InpPlace">
+        <div class="titleInp">Start Date</div>
+        <div class="Input">
+          <input
+            type="date"
+            class="inp"
+            [(ngModel)]="filter.startDate"
+            placeholder="YYYY-MM-DD"
+          />
+        </div>
+      </div>
+      <div class="InpPlace">
+        <div class="titleInp">End Date</div>
+        <div class="Input">
+          <input
+            type="date"
+            class="inp"
+            [(ngModel)]="filter.endDate"
+            placeholder="YYYY-MM-DD"
+          />
+        </div>
+      </div>
+      <div class="PlaceBtnFilter">
+        <button class="BtnFilter" (click)="applyFilter()">Filter</button>
+      </div>
+    </div>
+  </div>
+  <div class="DispRes">
+    <div class="MenuDispRes">ALL Reservations</div>
+    <div class="ListOfItem" *ngIf="reservations.length > 0; else noReservations">
+      <div class="itemRes" *ngFor="let reservation of reservations">
+        <div class="leftItemRes">
+          <div class="topLeftItemRes">
+            <div class="PlaceImageTopLeftItemRes">
+              <div class="cadreImagePlaceImageTopLeftItemRes">
+                <img
+                  [src]="'assets/imgs/' + reservation.voiture.imageName"
+                  class="imagecarDisp"
+                />
+              </div>
+            </div>
+            <div class="DescriptionTopLeftItemRes">
+              <div class="ListDescriptionTopLeftItemRes">
+                <div class="ItemListDescriptionTopLeftItemRes">
+                  <span class="titleListRes">Brand :</span>
+                  <span class="titleCarListRes">{{ reservation.voiture.brand }}</span>
+                </div>
+                <div class="ItemListDescriptionTopLeftItemRes">
+                  <span class="titleListRes">Model :</span>
+                  <span class="titleCarListRes">{{ reservation.voiture.model }}</span>
+                </div>
+                <div class="ItemListDescriptionTopLeftItemRes">
+                  <span class="titleListRes">Licence plate :</span>
+                  <span class="titleCarListRes">{{ reservation.voiture.licenceplate }}</span>
+                </div>
+                <div class="ItemListDescriptionTopLeftItemRes">
+                  <span class="titleListRes">Price :</span>
+                  <span class="titleCarListRes">{{ reservation.amount }} DH</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="BottomLeftItemRes">
+            <div class="ImagePlaceCity">
+              <img src="assets/icons/city.png" class="imagecarDisp" />
+            </div>
+            <div class="TextPlaceCity">{{ reservation.startCity.nameCity }}</div>
+            <div class="ImagePlaceCity ImagePlaceCity2">
+              <img src="assets/icons/city.png" class="imagecarDisp" />
+            </div>
+            <div class="TextPlaceCity">{{ reservation.endCity.nameCity }}</div>
+          </div>
+        </div>
+        <div class="RightItemRes">
+          <div class="ItemRightItemRes">
+            <div class="dayZone">
+              {{ calculateDays(reservation.startDate, reservation.endDate) }} Jour(s)
+            </div>
+            <div class="ZonePrace">{{ reservation.amount }} DH</div>
+          </div>
+          <div class="ItemRightItemRes2">
+            <button class="BtnModify" (click)="navigateToModify(reservation)">Modify</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #noReservations>
+      <div class="noReservations">No reservations found.</div>
+    </ng-template>
+  </div>
+</div>

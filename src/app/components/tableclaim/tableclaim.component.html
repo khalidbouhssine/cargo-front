@@ -1,0 +1,24 @@
+<div class="tabCar">
+    <app-menutopdash [title]="'Claim'"></app-menutopdash>
+    <div class="placeTab">
+        <div class="TitlesTab">
+            <div class="TitlesTabItem">ID Claim</div>
+            <div class="TitlesTabItem">Name Client</div>
+            <div class="TitlesTabItem">Date</div>
+        </div>
+        <!-- Dynamic Data Rows -->
+        <div *ngFor="let claim of claims" class="dataTab" (click)="navigateToInfoClaim(claim.idReclamation)">
+            <div class="TitlesTabItem">{{ claim.idReclamation }}</div>
+            <div class="TitlesTabItem">{{ claim.nomComplet }}</div>
+            <div class="TitlesTabItem">{{ claim.dateReclamation | date: 'short' }}</div>
+        </div>
+
+        <div class="Pagination">
+            <div class="PaginationCenter">
+                <button class="Btn" (click)="decrementPage()">-</button>
+                <div class="show">{{ currentPage + 1 }}</div>
+                <button class="Btn" (click)="incrementPage()">+</button>
+            </div>
+        </div>
+    </div>
+</div>

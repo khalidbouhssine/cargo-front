@@ -1,0 +1,37 @@
+<div class="dispProfile" *ngIf="profile">
+    <div class="topZone">
+      <div class="placeImg">
+        <img src="assets/bg/khalid.jfif" alt="profile" class="image">
+      </div>
+    </div>
+    <div class="placeNameBtn">
+      <div class="namePlace">{{ profile.nomComplet }}</div>
+    </div>
+    <div class="PartOfInfo">
+      <div class="partItem">
+        <div class="partTitle">CIN :</div>
+        <div class="partDiscrip">{{ profile.cin }}</div>
+      </div>
+      <div class="partItem">
+        <div class="partTitle">CITY :</div>
+        <div class="partDiscrip">{{ profile.city }}</div>
+      </div>
+      <div class="partItem">
+        <div class="partTitle">Email :</div>
+        <div class="partDiscrip">{{ profile.email }}</div>
+      </div>
+      <div class="partItem">
+        <div class="partTitle">Address :</div>
+        <div class="partDiscrip">{{ profile.addresse }}</div>
+      </div>
+      <div class="partItem">
+        <div class="partTitle">Reservations :</div>
+        <div class="partDiscrip">{{ profile.reservationCount }}</div>
+      </div>
+      <div class="partItem">
+        <div class="partTitle">Claims :</div>
+        <div class="partDiscrip">{{ profile.reclamationCount }}</div>
+      </div>
+    </div>
+</div>
+  

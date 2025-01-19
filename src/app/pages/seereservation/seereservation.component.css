@@ -1,0 +1,284 @@
+.seereservation{
+    flex: 1;
+    height: 100vh;
+    display: flex;
+}
+.MenuLeft{
+    width: 300PX;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.MenuLeftCenter{
+    flex: 1;
+    height: 95%;
+    background: linear-gradient(20deg,#fffce9, #e8f6ff,#fffce9);
+    margin-left: 15PX;
+    margin-right: 15PX;
+    border-radius: 4PX;
+    box-shadow: 1PX 1PX 10PX rgba(0, 0, 0, 0.201);
+}
+.DispRes{
+    flex: 1;
+    height: 100%;
+}
+.title{
+    flex: 1;
+    height: 60PX;
+    display: flex;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 25PX;
+    text-transform: uppercase;
+    margin-left: 20PX;
+    margin-right: 20PX;
+    margin-bottom: 20PX;
+}
+.InpPlace{
+    flex: 1;
+    height: 85PX;
+    margin-left: 20PX;
+    margin-right: 20PX;
+    margin-top: 10PX;
+}
+.titleInp{
+    flex: 1;
+    height: 25PX;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16PX;
+    display: flex;
+    align-items: center;
+}
+.Input{
+    flex: 1;
+    height: 60PX;
+    background-color: rgb(255, 255, 255);
+    border: 1PX solid rgb(206, 206, 206);
+    padding-left: 10PX;
+    padding-right: 10PX;
+}
+.inp{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0PX;
+    cursor: pointer;
+}
+.PlaceBtnFilter{
+    flex: 1;
+    height: 60PX;
+    background-color: red;
+    margin-top: 10PX;
+    margin-left: 20PX;
+    margin-right: 20PX;
+}
+.BtnFilter{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0PX;
+    background-color: #0fa0cd;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 17PX;
+    text-transform: uppercase;
+    color: white;
+}
+.BtnFilter:hover{
+    background-color:#1098c1;
+}
+.BtnFilter:focus{
+    background-color:#1098c1;
+}
+.MenuDispRes{
+    flex: 1;
+    height: 70PX;
+    margin-left: 10PX;
+    margin-right: 20PX;
+    margin-top: 15PX;
+    border-radius: 4PX;
+    box-shadow: 1PX 1PX 10PX rgba(0, 0, 0, 0.201);
+    background: linear-gradient(20deg,#fffce9, #e8f6ff,#fffce9);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 20PX;
+    display: flex;
+    align-items: center;
+    padding-left: 20PX;
+    text-transform: uppercase;
+    color: #595959;
+}
+.ListOfItem{
+    flex: 1;
+    height: calc(100vh - 110px);
+    margin-left: 10PX;
+    margin-right: 20PX;
+    margin-top: 10PX;
+    padding-top: 20PX;
+    overflow-y: scroll;
+}
+.ListOfItem::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+.itemRes{
+    flex: 1;
+    height: 250PX;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20PX;
+    border: 1PX solid rgb(206, 206, 206);
+    cursor: pointer;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0PX 0PX 10PX rgba(0, 0, 0, 0.11);
+    opacity: 0.6;
+}
+.itemRes:hover{
+    background-color: rgb(250, 250, 250);
+    opacity: 1;
+}
+.leftItemRes{
+    flex: 1;
+    height: 100%;
+}
+.RightItemRes{
+    width: 200PX;
+    height: 100%;
+    border-left: 1PX dashed rgb(206, 206, 206);
+}
+.topLeftItemRes{
+    flex: 1;
+    height: 70%;
+    margin-left: 30PX;
+    margin-right: 30PX;
+    display: flex;
+}
+.BottomLeftItemRes{
+    flex: 1;
+    height: 30%;
+    margin-left: 30PX;
+    margin-right: 30PX;
+    display: flex;
+    align-items: center;
+    padding-left: 50PX;
+}
+.PlaceImageTopLeftItemRes{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.DescriptionTopLeftItemRes{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.cadreImagePlaceImageTopLeftItemRes{
+    width: 70%;
+    height: 80%;
+    background-color: rgb(224, 224, 224);
+    border-radius: 4PX;
+    overflow: hidden;
+}
+.ListDescriptionTopLeftItemRes{
+    width: 80%;
+    height: fit-content;
+}
+.ItemListDescriptionTopLeftItemRes{
+    flex: 1;
+    height: 30PX;
+    display: flex;
+    align-items: center;
+}
+.titleListRes{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18PX;
+    text-transform: capitalize;
+    color: rgb(32, 32, 32);
+}
+.titleCarListRes{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18PX;
+    text-transform: uppercase;
+    color: rgb(32, 32, 32);
+    margin-left: 5PX;
+}
+.imagecarDisp{
+    width: 100%;
+    height: 100%;
+}
+.ImagePlaceCity{
+    width: 40PX;
+    height: 40PX;
+}
+.TextPlaceCity{
+    width: fit-content;
+    height: 40PX;
+    display: flex;
+    align-items: center;
+    margin-left: 10PX;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 20PX;
+    text-transform: uppercase;
+    color: #0fa0cd;
+}
+.ImagePlaceCity2{
+    margin-left: 100PX;
+}
+.ItemRightItemRes{
+    flex: 1;
+    height: 80PX;
+    margin-left: 20PX;
+    margin-right: 20PX;
+}
+.ItemRightItemRes2{
+    flex: 1;
+    height: 60PX;
+    margin-top: 90PX;
+    margin-left: 20PX;
+    margin-right: 20PX;
+}
+.dayZone{
+    flex: 1;
+    height: 50PX;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color: rgb(32, 32, 32);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17PX;
+}
+.ZonePrace{
+    flex: 1;
+    height: 30PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 25PX;
+    text-transform: uppercase;
+    color: #0fa0cd;
+}
+.BtnModify{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0PX;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17PX;
+    color: gray;
+    background-color: rgb(242, 242, 242);
+    text-transform: capitalize;
+}
+.BtnModify:hover{
+    background-color: #1098c1;
+    color: white;
+}

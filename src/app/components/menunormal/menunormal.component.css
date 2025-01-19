@@ -1,0 +1,10 @@
+.menunormal{
+    height: 60PX;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 150PX;
+    height: 80%;
+}

@@ -1,0 +1,96 @@
+.placeTab{
+    flex: 1;
+    height: fit-content;
+    padding-left: 20PX;
+    padding-right: 20PX;
+    padding-top: 10PX;
+}
+.TitlesTab{
+    width: 100%;
+    height: 60PX;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 20PX;
+}
+.TitlesTabItem{
+    width: 24%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+.Addcars{
+    width: 200PX;
+    height: 50PX;
+    border: none;
+    outline: none;
+    padding: 0PX;
+    background-color: #0FA0CD;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15PX;
+    margin-bottom: 10PX;
+}
+.Addcars:focus{
+    background-color: #0f91b9;
+}
+.Addcars:hover{
+    background-color: #0f91b9;
+}
+
+.dataTab{
+    width: 100%;
+    height: 60PX;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16PX;
+    border-bottom: 1PX solid gainsboro;
+    cursor: pointer;
+}
+.dataTab:hover{
+    background-color: rgb(250, 250, 250);
+}
+.Pagination{
+    width: 100%;
+    height: 50PX;
+    margin-top: 10PX;
+    display: flex;
+    justify-content: center;
+}
+.PaginationCenter{
+    width: 200PX;
+    height: 100%;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+}
+.Btn{
+    width: 50PX;
+    height: 100%;
+    background-color: rgb(240, 240, 240);
+    border: none;
+    outline: none;
+    padding: 0PX;
+    font-weight: bold;
+    color: gray;
+    font-size: 20PX;
+}
+.Btn:hover{
+    background-color: rgb(210, 210, 210);
+}
+.Btn:focus{
+    background-color: rgb(210, 210, 210);
+}
+.show{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}

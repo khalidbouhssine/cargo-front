@@ -1,1 +1,140 @@
-<p>home works!</p>
+<app-menuhome></app-menuhome>
+<app-menumobilehome></app-menumobilehome>
+<div class="ZoneSearch">
+    <div class="ZoneSearchCenter">
+        <div class="formPlace">
+            <div class="Title">Find a Car</div>
+            <div class="inputPlace mgt">
+                <div class="titreinp">Start Date :</div>
+                <label for="Date1" class="input">
+                    <input type="date" class="inp" (click)="openDatePicker($event)" [(ngModel)]="startDate" id="Date1">
+                </label>
+            </div>
+            <div class="inputPlace">
+                <div class="titreinp">End Date :</div>
+                <label for="Date2" class="input">
+                    <input type="date" class="inp" (click)="openDatePicker($event)" [(ngModel)]="endDate" id="Date2">
+                </label>
+            </div>
+            <div class="inputPlace">
+                <div class="titreinp">City :</div>
+                <label for="text1" class="input">
+                  <select class="inp" id="text1" [(ngModel)]="selectedCity">
+                    <option value="">---</option>
+                    <option *ngFor="let city of cities" [value]="city.id">{{ city.nameCity }}</option>
+                  </select>
+                </label>
+            </div>              
+            <div class="PlaceBtn">
+                <button class="BtnForm" (click)="search()">Search</button>
+            </div>
+        </div>
+        <div class="ImagePlace">
+            <img src="assets/bg/home.png" alt="menu" class="imageHome">
+        </div>
+    </div>
+</div>
+<div class="ListDisplay">
+    <div class="ListDisplayCenter">
+        <div class="TitleList" id="carzone">Cars :</div>
+        <div class="ElementCars">
+            <div class="ElementCarsItem">
+                <img src="assets/bg/bmw.png" class="imagecars">
+                <div class="PartText">
+                    <div class="PartTextCenter">
+                        <div class="TitleCarPlace">BMW</div>
+                        <div class="TextDescrip">Unleash the ultimate driving experience with the latest BMW, featuring a sleek, aggressive design and cutting-edge performance that leaves a lasting impression.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ElementCarsItem">
+                <img src="assets/bg/audi.png" class="imagecars">
+                <div class="PartText">
+                    <div class="PartTextCenter">
+                        <div class="TitleCarPlace">Audi</div>
+                        <div class="TextDescrip">Embrace sophistication and innovation with the Audi, blending luxury, advanced technology, and a performance-driven design that elevates every journey.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ElementCarsItem">
+                <img src="assets/bg/vols.png" class="imagecars">
+                <div class="PartText">
+                    <div class="PartTextCenter">
+                        <div class="TitleCarPlace">Volkswagen</div>
+                        <div class="TextDescrip">Step into the world of reliability and style with the Volkswagen, offering a perfect mix of practicality, modern design, and smooth driving experience for every road.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ListDisplay">
+    <div class="ListDisplayCenter">
+        <div class="TitleList">Cities :</div>
+        <div class="ElementCars">
+            <div class="ElementCarsItem">
+                <img src="assets/bg/casablanca.png" class="imagecars">
+                <div class="PartText">
+                    <div class="PartTextCenter">
+                        <div class="TitleCarPlace">CASABLANCA</div>
+                        <div class="TextDescrip">Our Casablanca location is at the heart of Morocco's economic capital, offering easy access to the city's vibrant business hubs, iconic landmarks, and dynamic urban energy.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ElementCarsItem">
+                <img src="assets/bg/agadir.png" class="imagecars">
+                <div class="PartText">
+                    <div class="PartTextCenter">
+                        <div class="TitleCarPlace">AGADIR</div>
+                        <div class="TextDescrip">Located in the sunny coastal city of Agadir, our branch is perfect for exploring the stunning beaches, vibrant markets, and relaxed charm of this Atlantic gem.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ElementCarsItem">
+                <img src="assets/bg/rabat.png" class="imagecars">
+                <div class="PartText">
+                    <div class="PartTextCenter">
+                        <div class="TitleCarPlace">RABAT</div>
+                        <div class="TextDescrip">In the historic and elegant city of Rabat, our location provides seamless access to the capital's rich cultural heritage, modern infrastructure, and serene atmosphere.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ListDisplay">
+    <div class="ListDisplayCenter">
+        <div class="TitleList" id="contactzone">Contact :</div>
+    </div>
+</div>
+<div class="PlaceContact">
+    <div class="PlaceContactCenter">
+        <div class="ZoneContact">
+            <div class="InputContact">
+                <div class="TitleContact">Subject :</div>
+                <div class="inpContact">
+                    <input type="text" class="inp" [(ngModel)]="reclamationObjet" placeholder="Write the subject">
+                </div>
+            </div>
+            <div class="InputContact">
+                <div class="TitleContact">Telephone :</div>
+                <div class="inpContact">
+                    <input type="text" class="inp" [(ngModel)]="reclamationTelephone" placeholder="Write your Phone 06 ...">
+                </div>
+            </div>
+            <div class="InputContactMessage">
+                <div class="TitleContact">Message :</div>
+                <div class="inpContactMessage">
+                    <textarea class="inp inpM" [(ngModel)]="reclamationMessage" placeholder="Write your Message"></textarea>
+                </div>
+            </div>
+            <div class="PlaceBtnContact">
+                <button class="BtnContact" (click)="submitReclamation()">Send</button>
+            </div>            
+        </div>
+        <div class="ZoneImage">
+            <img src="assets/bg/contact.png" alt="contact" class="imageHome">
+        </div>
+    </div>
+</div>
+<app-menubottom></app-menubottom>

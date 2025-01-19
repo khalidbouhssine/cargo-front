@@ -1,59 +1,55 @@
-<app-menunormal></app-menunormal>
-<app-titlenormal [title]="'Create Account'" [customClass]="'mt-5 mb-1'" ></app-titlenormal>
-<form action="" method="post" class="container">
-    <div class="row mt-4 mt-md-2">
-        <div class="col-12 col-md-6">
-            <div class="mb-1">Full Name</div>
-            <app-input 
-                type="text" 
-                id="username" 
-                placeholder="Enter your username" 
-                [required]="true">
-            </app-input>
+<div class="register w-100">
+    <app-menunormal></app-menunormal>
+    <div class="container containerstyle">
+      <div class="titre">Create Account</div>
+      <form class="formRegister" (ngSubmit)="register()">
+        <div class="inpZone">
+          <div class="inppart">
+            <div class="titleInp">Full Name</div>
+            <div class="inp">
+              <input type="text" class="inpRegister" placeholder="Enter your Full Name" [(ngModel)]="formData.nomComplet" name="nomComplet" required>
+            </div>
+          </div>
+          <div class="inppart">
+            <div class="titleInp">Email</div>
+            <div class="inp">
+              <input type="email" class="inpRegister" placeholder="Enter your Email" [(ngModel)]="formData.email" name="email" required>
+            </div>
+          </div>
         </div>
-        
-        <div class="col-12 col-md-6" style="height: 55px;">
-            <div class="mb-1">Email</div>
-            <app-input 
-                type="text" 
-                id="username"
-                placeholder="Enter your email" 
-                [required]="true">
-            </app-input>
+        <div class="inpZone">
+          <div class="inppart">
+            <div class="titleInp">City</div>
+            <div class="inp">
+              <input type="text" class="inpRegister" placeholder="Enter your City" [(ngModel)]="formData.city" name="city" required>
+            </div>
+          </div>
+          <div class="inppart">
+            <div class="titleInp">CIN</div>
+            <div class="inp">
+              <input type="text" class="inpRegister" placeholder="Enter your CIN" [(ngModel)]="formData.cin" name="cin" required>
+            </div>
+          </div>
         </div>
+        <div class="inpZone">
+          <div class="inppart">
+            <div class="titleInp">Password</div>
+            <div class="inp">
+              <input type="password" class="inpRegister" placeholder="Enter your Password" [(ngModel)]="formData.password" name="password" required>
+            </div>
+          </div>
+          <div class="inppart">
+            <div class="titleInp">Repeat Password</div>
+            <div class="inp">
+              <input type="password" class="inpRegister" placeholder="Repeat your Password" [(ngModel)]="formData.confirmPassword" name="confirmPassword" required>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btnForm">Create</button>
+      </form>
+      <div class="PlaceLink">
+        <div class="PlaceLinkText">Already have an account? <span class="linkclick" routerLink="/login">Login</span></div>
+      </div>
     </div>
-    <div class="row mt-4 mt-md-2">
-        <div class="col-12 col-md-6">
-            <div class="mb-1">City</div>
-            <app-input 
-                type="text" 
-                id="username" 
-                placeholder="Enter your City" 
-                [required]="true">
-            </app-input>
-        </div>
-        
-        <div class="col-12 col-md-6">
-            <div class="mb-1">Password</div>
-            <app-inputpassword 
-              type="password" 
-              id="password" 
-              placeholder="Enter your password" 
-              [required]="true">
-            </app-inputpassword>
-        </div>
-          
-    </div>
-      
-    <div class="row">
-        <div class="col-12">
-            <app-btnnormal></app-btnnormal>
-        </div>
-    </div>
-    
-    <div class="w-100 d-flex justify-content-center align-items-center" style="height: 55PX;">
-        <a href="/home" style="text-decoration: none;" class="lien">Already have an account?</a>
-    </div>
-    
-         
-</form>
+  </div>
+  

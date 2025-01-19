@@ -1,0 +1,21 @@
+<div class="tabCar">
+  <app-menutopdash [title]="'City'"></app-menutopdash>
+  <div class="placeTab">
+    <button class="Addcars" routerLink="/dashboardg/addcity" routerLinkActive="active">Add City</button>
+    <div class="TitlesTab">
+      <div class="TitlesTabItem">Id City</div>
+      <div class="TitlesTabItem">Name City</div>
+      <div class="TitlesTabItem"></div>
+    </div>
+    <!-- Dynamic Data Rows -->
+    <div class="scrollzone">
+      <div *ngFor="let city of cities" class="dataTab">
+        <div class="TitlesTabItem">{{ city.id }}</div>
+        <div class="TitlesTabItem">{{ city.nameCity }}</div>
+        <div class="TitlesTabItem">
+          <button class="btn btn-danger" (click)="deleteCity(city.id)">DELETE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

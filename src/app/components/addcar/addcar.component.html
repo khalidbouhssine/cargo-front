@@ -1,0 +1,45 @@
+<div class="addcars">
+  <app-menutopdash [title]="'ADD Car'"></app-menutopdash>
+  <div class="formPlace">
+    <form (ngSubmit)="onSubmit()" [formGroup]="carForm" class="form" enctype="multipart/form-data">
+      
+      <!-- Image Input -->
+      <div class="ZoneInp">
+        <div class="titleInp">Image of car</div>
+        <label for="imageCar" class="inpDiv">Click Here</label>
+        <input type="file" id="imageCar" (change)="onFileChange($event)" class="inpImg">
+      </div>
+      
+      <!-- Form Fields -->
+      <div class="ZoneInp" *ngFor="let field of fields">
+        <div class="titleInp">{{ field.label }}</div>
+        <div class="inpDivinp">
+          
+          <!-- Text and Number Inputs -->
+          <input
+            *ngIf="!field.isSelect"
+            [type]="field.type"
+            [placeholder]="field.label"
+            formControlName="{{ field.name }}"
+            class="inp">
+
+          <!-- Select Input for Statut -->
+          <select
+            *ngIf="field.isSelect"
+            formControlName="{{ field.name }}"
+            class="inp">
+            <option *ngFor="let option of field.options" [value]="option">{{ option }}</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button class="btnSave" type="submit">Save</button>
+    </form>
+
+    <!-- Image Preview -->
+    <div class="ImgPlace" *ngIf="imagePreview">
+      <img [src]="imagePreview" alt="car image" class="imgcar">
+    </div>
+  </div>
+</div>

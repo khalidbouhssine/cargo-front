@@ -1,0 +1,32 @@
+<div class="tabCar">
+  <app-menutopdash [title]="'Reservation'"></app-menutopdash>
+  <div class="placeTab">
+    <div class="TitlesTab">
+      <div class="TitlesTabItem">ID Reservation</div>
+      <div class="TitlesTabItem">Name Car</div>
+      <div class="TitlesTabItem">Start Date</div>
+      <div class="TitlesTabItem">End Date</div>
+    </div>
+
+    <!-- Dynamic Data Rows -->
+    <div
+      *ngFor="let reservation of reservations"
+      class="dataTab"
+      (click)="navigateToInfoReservation(reservation)"
+    >
+      <div class="TitlesTabItem">{{ reservation.idReservation }}</div>
+      <div class="TitlesTabItem">{{ reservation.voiture.brand }} - {{ reservation.voiture.model }}</div>
+      <div class="TitlesTabItem">{{ reservation.startDate | date: 'short' }}</div>
+      <div class="TitlesTabItem">{{ reservation.endDate | date: 'short' }}</div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="Pagination">
+      <div class="PaginationCenter">
+        <button class="Btn" (click)="decrementPage()">-</button>
+        <div class="show">{{ currentPage + 1 }}</div>
+        <button class="Btn" (click)="incrementPage()">+</button>
+      </div>
+    </div>
+  </div>
+</div>

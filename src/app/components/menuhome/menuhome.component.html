@@ -1,0 +1,41 @@
+<div class="menuHome">
+    <div class="menuHomeCenter">
+      <div class="logoPlace">
+        <img src="assets/logo/logo.png" alt="logo" class="logo">
+      </div>
+      <div class="MenuList">
+        <div class="itemMenuList" [routerLink]="'/home'">Home</div>
+        <div class="itemMenuList" [routerLink]="'/seereservation'">Reservation</div>
+        <a  class="itemMenuList" href="/home/#carzone">Cars</a>
+        <div class="itemMenuList" (click)="openLocation()">Location</div>
+        <a  class="itemMenuList" href="/home/#contactzone">Contact</a>
+
+      </div>
+      <div class="Profil">
+        <div class="ProfilCenter">
+          <button class="BtnMenu" (click)="toggleMenu()">
+            <img src="assets/icons/fleche.png" alt="fleche" class="imgFleche">
+          </button>
+          <div class="Name">khalid</div>
+          <div class="ImgAccount">
+            <img src="assets/bg/khalid.jfif" alt="person" class="imgProfile">
+          </div>
+          <div class="MenuDisp" *ngIf="isMenuVisible">
+            <div class="MenuDispItem" [routerLink]="'/dispprofile'">
+              <div class="IconPlace">
+                <img src="assets/icons/account.png" alt="logout" class="ImgIcon">
+              </div>
+              <div class="TitlePlace">Profile</div>
+            </div>
+            <div class="MenuDispItem" (click)="logout()">
+              <div class="IconPlace">
+                <img src="assets/icons/deconnecter.png" alt="logout" class="ImgIcon">
+              </div>
+              <div class="TitlePlace">Log-out</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  

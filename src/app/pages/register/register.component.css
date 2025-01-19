@@ -1,12 +1,117 @@
-.container{
-    padding-bottom: 50PX;
-
+.register{
+    height: fit-content;
+    padding-bottom: 80PX;
 }
-.lien{
-    color: #242525;
-    margin-top: 80PX;
+.containerstyle{
+    height: fit-content;
+    margin-top: 20PX;
+    max-width: 1100PX;
 }
-.lien:hover{
-    color: #0fa0cd;
+.titre{
+    width: 100%;
+    height: 60PX;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 24PX;
+    display: flex;
+    align-items: center;
+}
+.formRegister{
+    width: 100%;
+    height: fit-content;
+}
+.inpZone{
+    width: 100%;
+    height: 90PX;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10PX;
+}
+.inppart{
+    width: 49%;
+    height: 100%;
+}
+.titleInp{
+    width: 100%;
+    height: 30PX;
+}
+.inp{
+    flex: 1;
+    height: 60PX;
+    border-radius: 5PX;
+    background-color: white;
+    border: 1PX solid rgb(196, 196, 196);
+    overflow: hidden;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.inp:hover{
+    box-shadow: 0PX 0PX 5PX #0FA0CD;
+    border: none;
+}
+.inpRegister{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0PX;
+}
+.btnForm{
+    width: 100%;
+    height: 60PX;
+    background-color: #0FA0CD;
+    margin-top: 25PX;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18PX;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0PX;
+    border-radius: 5PX;
+    text-transform: uppercase;
+}
+.btnForm:focus{
+    background-color: #1090b7;
+}
+.btnForm:hover{
+    background-color: #1090b7;
+}
+.PlaceLink{
+    width: 100%;
+    height: 60PX;
+    margin-top: 40PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.PlaceLinkText{
+    display: flex;
+}
+.linkclick{
+    color: #0FA0CD;
+    font-weight: bold;
+    margin-left: 5PX;
+    cursor: pointer;
+}
+.linkclick:hover{
+    color: #1090b7;
     text-decoration: underline;
+}
+
+
+@media (max-width: 550px) {
+    .inpZone{
+        width: 100%;
+        height: fit-content;
+        display: block;
+        margin-top: 0PX;
+    }
+    .inppart{
+        width: 100%;
+        height: 90PX;
+    }
 }

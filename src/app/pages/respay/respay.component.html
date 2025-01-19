@@ -1,0 +1,89 @@
+<div class="seereservation">
+  <div class="MenuLeft">
+    <div class="MenuLeftCenter">
+      <div class="title">My Car</div>
+      <div class="ImageCarModify">
+          <img src="assets/imgs/{{ carDetails.imageName }}" class="imagecarDisp" *ngIf="carDetails?.imageName">
+      </div>
+      <div class="DecriptionModify" *ngIf="carDetails">
+        <div class="ItemListDescriptionTopLeftItemRes">
+          <span class="titleListRes resizeDescriptionModify">Brand :</span>
+          <span class="titleCarListRes resizeDescriptionModify">{{ carDetails.brand }}</span>
+        </div>
+        <div class="ItemListDescriptionTopLeftItemRes">
+          <span class="titleListRes resizeDescriptionModify">Model :</span>
+          <span class="titleCarListRes resizeDescriptionModify">{{ carDetails.model }}</span>
+        </div>
+        <div class="ItemListDescriptionTopLeftItemRes">
+          <span class="titleListRes resizeDescriptionModify">Licence plate :</span>
+          <span class="titleCarListRes resizeDescriptionModify">{{ carDetails.licencePlate }}</span>
+        </div>
+        <div class="ItemListDescriptionTopLeftItemRes">
+          <span class="titleListRes resizeDescriptionModify">Price :</span>
+          <span class="titleCarListRes resizeDescriptionModify">{{ carDetails.pricePerDay }} DH</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="DispRes">
+    <div class="MenuDispRes">
+      <div class="titleMenuDispRes">Payment</div>
+    </div>
+    <div class="ListOfItem">
+      <div class="ZoneInputModify">
+        <div class="TitleZoneInputModify">End City</div>
+        <div class="InputZoneInputModify">
+          <select class="inp" id="text1" [(ngModel)]="selectedCity">
+            <option value="">---</option>
+            <option *ngFor="let city of cities" [value]="city.id">{{ city.nameCity }}</option>
+          </select>
+        </div>
+      </div>        
+      <div class="ZoneInputModify">
+        <div class="TitleZoneInputModify">Card Number</div>
+        <div class="InputZoneInputModify">
+          <input type="text" class="inp" placeholder="**** **** **** ****"
+                 [(ngModel)]="cardNumber" (input)="onCardNumberInput($event)" maxlength="16" />
+        </div>
+      </div>                             
+      <div class="ZoneInputModify">
+        <div class="TitleZoneInputModify">Expiration Month</div>
+        <div class="InputZoneInputModify">
+          <select class="inp">
+            <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="ZoneInputModify">
+        <div class="TitleZoneInputModify">Expiration Year</div>
+        <div class="InputZoneInputModify">
+          <select class="inp">
+            <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="ZoneInputModify">
+        <div class="TitleZoneInputModify">CVV Code</div>
+        <div class="InputZoneInputModify">
+          <input type="text" class="inp" placeholder="***">
+        </div>
+      </div>
+      <div class="ZoneInputModify">
+        <div class="TitleZoneInputModify">Type of Card</div>
+        <div class="InputZoneInputModify">
+          <select class="inp" [(ngModel)]="selectedCardType">
+            <option value="visa">Visa</option>
+            <option value="MasterCard">Mastercard</option>
+          </select>
+        </div>
+      </div>
+      <div class="TotalPriceModify">
+          <span class="TotalText">Total :</span>
+          <span class="TotalNumber">{{ totalPrice }} DH</span>
+      </div>
+      <div class="PlaceBtnmodify">
+        <button class="Btnmodify" (click)="paymentNow()">Pay Now</button>
+      </div>
+    </div>
+  </div>
+</div>

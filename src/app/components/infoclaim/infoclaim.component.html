@@ -1,0 +1,26 @@
+<div class="inforeservation">
+    <app-menutopdash [title]="'Info-Claim'"></app-menutopdash>
+  
+    <div class="placeinfo" *ngIf="!isLoading && !errorMessage">
+      <div class="ZoneTitleInfo">
+        <div class="Title">Name Client:</div>
+        <div class="info">{{ claimData.nomCompletClient }}</div>
+      </div>
+      <div class="ZoneTitleInfo">
+        <div class="Title">Subject:</div>
+        <div class="info">{{ claimData.objetReclamation }}</div>
+      </div>
+      <div class="ZoneTitleInfo">
+        <div class="Title">Phone:</div>
+        <div class="info">{{ claimData.telephone }}</div>
+      </div>
+      <div class="ZoneTitleInfo ZoneTitleInfoMessage">
+        <div class="Title">Message:</div>
+        <div class="info infotext">{{ claimData.message }}</div>
+      </div>
+    </div>
+  
+    <div *ngIf="isLoading" class="loading">Loading claim information...</div>
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  </div>
+  

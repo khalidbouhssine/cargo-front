@@ -1,0 +1,27 @@
+<div class="Login">
+    <app-menunormal></app-menunormal>
+    <div class="parts">
+      <div class="partsCenter">
+        <div class="loginPanel">
+          <div class="loginTitle">Login</div>
+          <form (ngSubmit)="login()" class="form">
+            <div class="inpPlace">
+              <div class="titleInp">Email</div>
+              <div class="inputDiv">
+                <input type="text" [(ngModel)]="email" name="email" placeholder="Enter your Email" class="inp" required>
+              </div>
+            </div>
+            <div class="inpPlace">
+              <div class="titleInp">Password</div>
+              <div class="inputDiv">
+                <input type="password" [(ngModel)]="password" name="password" placeholder="Enter your Password" class="inp" required>
+              </div>
+            </div>
+            <button type="submit" class="btnLogin">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<app-menubottom></app-menubottom>
+  

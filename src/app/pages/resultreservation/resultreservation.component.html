@@ -1,0 +1,31 @@
+<div class="seereservation">
+    <div class="MenuLeft">
+      <div class="MenuLeftCenter">
+        <img src="assets/bg/pub.png" class="imgPub">
+      </div>
+    </div>
+    <div class="DispRes">
+      <div class="MenuDispRes">Result</div>
+      <div class="ListOfItem">
+        <div *ngIf="availableCars.length === 0" class="noCarsMessage">
+          No cars available for the selected dates and city.
+        </div>
+      
+        <div
+          *ngFor="let car of availableCars"
+          class="ItemCar"
+          (click)="navigateToPayment(car.idCar)"
+        >
+          <div class="PalceImgCar">
+            <img [src]="'assets/imgs/' + car.imageName" class="imgPub" alt="Car Image">
+          </div>
+          <div class="InfoCar">
+            <div class="brandCar">{{ car.brand }}</div>
+            <div class="PriceCar">{{ car.pricePerDay }} DH</div>
+          </div>
+        </div>
+      </div>
+        
+    </div>
+  </div>
+  

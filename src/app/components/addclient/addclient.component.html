@@ -1,0 +1,75 @@
+<div class="addcars">
+    <app-menutopdash [title]="'ADD Client'"></app-menutopdash>
+    <div class="formPlace">
+      <form (ngSubmit)="registerClient()" #clientForm="ngForm" class="form">
+        <div class="ZoneInp">
+          <div class="titleInp">Full Name</div>
+          <div class="inpDivinp">
+            <input
+              type="text"
+              class="inp"
+              placeholder="Full Name"
+              [(ngModel)]="client.nomComplet"
+              name="nomComplet"
+              required
+            />
+          </div>
+        </div>
+        <div class="ZoneInp">
+          <div class="titleInp">Email</div>
+          <div class="inpDivinp">
+            <input
+              type="email"
+              class="inp"
+              placeholder="Email"
+              [(ngModel)]="client.email"
+              name="email"
+              required
+            />
+          </div>
+        </div>
+        <div class="ZoneInp">
+          <div class="titleInp">City</div>
+          <div class="inpDivinp">
+            <input
+              type="text"
+              class="inp"
+              placeholder="City"
+              [(ngModel)]="client.city"
+              name="city"
+              required
+            />
+          </div>
+        </div>
+        <div class="ZoneInp">
+          <div class="titleInp">CIN</div>
+          <div class="inpDivinp">
+            <input
+              type="text"
+              class="inp"
+              placeholder="CIN"
+              [(ngModel)]="client.cin"
+              name="cin"
+              required
+            />
+          </div>
+        </div>
+        <div class="ZoneInp">
+          <div class="titleInp">Password</div>
+          <div class="inpDivinp">
+            <input
+              type="password"
+              class="inp"
+              placeholder="Password"
+              [(ngModel)]="client.password"
+              name="password"
+              required
+            />
+          </div>
+        </div>
+        <button type="submit" class="btnSave" [disabled]="clientForm.invalid">Save</button>
+      </form>
+      <div class="ImgPlace"></div>
+    </div>
+  </div>
+  

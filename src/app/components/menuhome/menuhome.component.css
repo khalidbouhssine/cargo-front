@@ -1,0 +1,157 @@
+.menuHome{
+    width: 100%;
+    height: 80PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.menuHomeCenter{
+    flex: 1;
+    height: 60PX;
+    margin-left: 20PX;
+    margin-right: 20PX;
+    border-radius: 4PX;
+    background: linear-gradient(20deg,#fff2b0, #b7e3ff,#fff2b0);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.logoPlace{
+    width: 170PX;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 100%;
+    height: 90%;
+}
+.MenuList{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.itemMenuList{
+    width: fit-content;
+    height: 30PX;
+    margin-left: 15PX;
+    display: flex;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18PX;
+    cursor: pointer;
+    color: rgb(48, 48, 48);
+    text-decoration: none;
+}
+.itemMenuList:hover{
+    text-decoration: underline;
+}
+.Profil{
+    width: 200PX;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ProfilCenter{
+    width: 92%;
+    height: 80%;
+    border-radius: 4PX;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.534);
+    cursor: pointer;
+}
+.ProfilCenter:hover{
+    background-color: rgb(248, 248, 248);
+}
+.BtnMenu{
+    width: 30PX;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0PX;
+    background-color: #b7e3ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Name{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 4PX;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18PX;
+    text-transform: capitalize;
+}
+.ImgAccount{
+    width: 40PX;
+    height: 80%;
+    background-color: rgb(178, 178, 178);
+    border-radius: 100%;
+    margin-right: 4PX;
+    overflow: hidden;
+}
+.imgProfile{
+    width: 100%;
+}
+.imgFleche{
+    width: 60%;
+}
+.MenuDisp{
+    width: 250PX;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 6PX;
+    box-shadow: 0PX 0PX 10PX rgba(0, 0, 0, 0.185);
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+.menuHome .MenuDisp{
+    bottom: -100PX;
+    right: 20PX;
+}
+.MenuDispItem{
+    width: 100%;
+    height: 50PX;
+    display: flex;
+}
+.MenuDispItem:hover{
+    background-color: rgb(248, 248, 248);
+}
+.IconPlace{
+    width: 50PX;
+    height: 50PX;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.TitlePlace{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18PX;
+}
+.ImgIcon{
+    width: 25PX;
+    height: 25PX;
+}
+.MenuDisp.ng-leave {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+@media (max-width: 790px) {
+    .menuHome{
+        display: none;
+    }
+}

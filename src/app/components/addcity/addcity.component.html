@@ -1,0 +1,22 @@
+<div class="addcars">
+    <app-menutopdash [title]="'ADD CITY'"></app-menutopdash>
+    <div class="formPlace">
+      <form (ngSubmit)="addCity()" #adminForm="ngForm" class="form">
+        <div class="ZoneInp">
+          <div class="titleInp">City Name</div>
+          <div class="inpDivinp">
+            <input
+              type="text"
+              class="inp"
+              placeholder="City Name"
+              [(ngModel)]="city.name"
+              name="nameCity"
+              required
+            />
+          </div>
+        </div>
+        <button type="submit" class="btnSave" [disabled]="!adminForm.form.valid">ADD</button>
+      </form>
+    </div>
+</div>
+  
